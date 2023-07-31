@@ -26,6 +26,7 @@ c: the number of real classes; labelnew: predicted labels;
 
 example on PenDigits data set with 512 anchors (BKHK generation) and 50 neighbors:
 
+load('PenDigits_data.mat') % load Data
 c = length(unique(label));
 [B,Anchor]=ULGEmzy(X,log2(512),50,1); % Anchor Generation
 [labelnew,~] = EDCAG(B,c); % Discrete Clustering
